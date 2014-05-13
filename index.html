@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="/lib/bower_components/underscore/underscore.js"></script>
+    <script src="/lib/bower_components/angular/angular.js"></script>
+    <script src="/lib/bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="/lib/bower_components/ace-builds/src-min-noconflict/ace.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Nova+Flat' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="/lib/bower_components/angular-ui-ace/ui-ace.js"></script>
+    <script src="app.js"></script>
+    <script src="lib/ace/src/ace.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body ng-app='app'>
+    <span class = 'title'> Shortcuts </span>
+    <div>
+      <div ng-controller='statsController'>
+      <div class = 'prompt'>
+      Using the least amount of keystrokes try
+      <br>
+      to match the text in the left panel with the
+      <br>
+      text in right panel. Hint: Try using the
+      <br>
+      shortcuts below.
+      </div>
+      <div class = 'legend'>
+        Legend
+         <br>
+        ⇧ - Shift
+         <br>
+        ⌥ - Alt
+         <br>
+        ⌃ - Control
+         <br>
+        ⌘ - Command
+         <br>
+        ↵ - Enter
+      </div>
+
+      <!-- Shortcuts -->
+      <div class='shortcuts'>
+        <div ng-repeat= "(key, value) in shortcuts track by $index">
+          <span class = 'keybinding' ng-class = '{completed: value[1] }' ng-mouseenter="description = true" ng-mouseleave= "description = false">
+              {{ value[0] }}
+          </span>
+          <br>
+          <div ng-show='description'> {{ key }} </div>
+        </div>
+      </div>
+      <!-- Scores -->
+      <div id='scores'>
+        <span class='totalScore' ng-class="{overTargetScore: cursorCount < 0 }"> {{ cursorCount + ' remaining' }} </span>
+        <span id='targetScore'> Match this side </span>
+        <div class='tryAgain' ng-show='cursorCount < 0 '>
+          Try Again?
+        </div>
+      </div>
+
+      <!-- Editor -->
+<div id='editor' ui-ace = "{theme:'monokai',mode: 'javascript',onLoad : aceLoaded}">
+var there = 'are a few things';
+var trouble = function() {
+  'that I would never do';
+  'But I guess I would';
+  'At least try it once';
+  'Even if it meant that';
+  'I had to be president';
+  'of the United States';
+};
+var ruby = "forever";
+var ruby = "forever";
+var ruby = "forever";
+var ruby = "forever";
+var ruby = "forever";
+var ruby = "forever";
+</div>
+
+
+<div id='editor2'
+ui-ace = "{
+theme:'pastel_on_dark',
+mode: 'javascript',
+onLoad : aceLoaded
+}" readonly="true">
+var there = 'once was a dog';
+var trouble = function() {
+  'I found him under a rug';
+};
+var javascript = "forever";
+var javascript = "forever";
+var javascript = "forever";
+var javascript = "forever";
+var javascript = "forever";
+var javascript = "forever";
+
+</div>
+
+      </div>
+    </div>
+  </body>
+</html>

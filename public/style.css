@@ -1,0 +1,114 @@
+body {
+  background-color:#e4e3d5;
+}
+#editor {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  bottom: 0;
+  left: 25%;
+  width: 500px;
+  height: 800px;
+}
+#editor2 {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  bottom: 0;
+  left: 60%;
+  width: 600px;
+  height: 800px;
+}
+#scores {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 25%;
+  bottom: 0;
+  width: 943px;
+  height: 300px;
+  padding: 21px;
+  background-color: #f5f2f0;
+}
+.totalScore {
+  font-size: 2.5em;
+  font-family: 'Nova Flat', cursive;
+  color: #bd7637;
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+.overTargetScore {
+  position: absolute;
+  top: 4%;
+  color: red;
+  font-size:3em;
+}
+#targetScore {
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  font-size: 2.5em;
+  color: #606e67;
+  font-family: 'Nova Flat', cursive;
+}
+.title {
+  position: absolute;
+  color: #3f4944;
+  top: .8%;
+  left: 1.5%;
+  font-family: 'Nova Flat', cursive;
+  font-size: 3em;
+}
+.shortcuts {
+  top: 20%;
+  padding: 220px 0px 0px 20px;
+  color: #5D6360;
+  font: 'OpenSansBold';
+  font-size: 2em;
+}
+.keybinding {
+  font-size: 1.6em;
+  color: #5D6360;
+  font: 'OpenSansBold';
+  transition: color 0.2 ease;
+  -webkit-transition: color 0.7s ease-in;
+  -moz-transition: color 0.7s ease-in;
+  -o-transition: color 0.7s ease-in;
+  -ms-transition: color 0.7s ease-in;
+  transition: color 0.7s ease-in;
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+.completed {
+  font-size: 2.2em;
+  color: #2ECC71;
+}
+.tryAgain {
+  position: absolute;
+  top: 1%;
+  left: 85%;
+  font-size: 1.5em;
+  font: 'OpenSansBold';
+  color: red;
+}
+.prompt {
+  padding: 20px;
+  width: 600px;
+  position: absolute;
+  top: 10%;
+  left:0;
+  font: 'OpenSansBold';
+  opacity:0.6;
+  background-color: #f5f5f5;
+}
+.legend {
+  padding: 30px 0px 0px 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font: 'OpenSansBold';
+  background-color: #f5f5f5;
+  opacity:0.6;
+  width: 600px;
+  height: 150px;
+}
