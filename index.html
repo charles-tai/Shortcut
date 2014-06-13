@@ -14,8 +14,9 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body ng-app='app'>
-    <span class = 'title'> Shortcuts </span>
+    <span class='title'> Shortcuts </span>
     <div>
+      <div id='successModal'>success</div>
       <div ng-controller='statsController'>
       <div class = 'prompt'>
       Using the least amount of keystrokes try
@@ -83,7 +84,7 @@ var ruby = "forever";
 ui-ace = "{
 theme:'pastel_on_dark',
 mode: 'javascript',
-onLoad : aceLoaded
+onLoad : aceLoaded2
 }" readonly="true">
 var there = 'once was a dog';
 var trouble = function() {
