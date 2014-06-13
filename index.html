@@ -17,12 +17,13 @@
     <span class = 'title'> Shortcuts </span>
     <div>
       <div ng-controller='statsController'>
+      <div id = 'success'>success</div>
       <div class = 'prompt'>
       Using the least amount of keystrokes try
       <br>
-      to match the text in the left panel with the
+      to match the left panel with the
       <br>
-      text in right panel. Hint: Try using the
+      right panel. Hint: Try using the
       <br>
       shortcuts below.
       </div>
@@ -60,8 +61,7 @@
       </div>
 
       <!-- Editor -->
-<div id='editor' ui-ace = "{theme:'monokai',mode: 'javascript',onLoad : aceLoaded}">
-var there = 'are a few things';
+<div id='editor' ui-ace = "{theme:'monokai',mode: 'javascript',onLoad : aceLoaded}">var there = 'are a few things';
 var trouble = function() {
   'that I would never do';
   'But I guess I would';
@@ -75,30 +75,18 @@ var ruby = "forever";
 var ruby = "forever";
 var ruby = "forever";
 var ruby = "forever";
-var ruby = "forever";
-</div>
+var ruby = "forever";</div>
 
 
 <div id='editor2'
 ui-ace = "{
 theme:'pastel_on_dark',
 mode: 'javascript',
-onLoad : aceLoaded
-}" readonly="true">
-var there = 'once was a dog';
-var trouble = function() {
-  'I found him under a rug';
-};
-var javascript = "forever";
-var javascript = "forever";
-var javascript = "forever";
-var javascript = "forever";
-var javascript = "forever";
-var javascript = "forever";
-
-</div>
+onLoad : aceLoaded2
+}">var there = 'once was a dog';</div>
 
       </div>
     </div>
+
   </body>
 </html>

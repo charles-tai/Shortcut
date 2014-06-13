@@ -1,6 +1,15 @@
 body {
   background-color:#e4e3d5;
 }
+#success {
+  position: absolute;
+  z-index: 1000;
+  top: 20%;
+  right: 50%;
+  width: 500px;
+  height: 500px;
+  background-color: green;
+}
 #editor {
   position: absolute;
   top: 10%;
@@ -67,7 +76,7 @@ body {
   font-size: 2em;
 }
 .keybinding {
-  font-size: 1.6em;
+  font-size: 1em;
   color: #5D6360;
   font: 'OpenSansBold';
   transition: color 0.2 ease;
