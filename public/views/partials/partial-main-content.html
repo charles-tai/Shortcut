@@ -1,0 +1,24 @@
+<div ng-controller='statsController'>
+  <!-- Scores -->
+  <div id='scores'>
+    <span class='totalScore' ng-class="{overTargetScore: cursorCount < 0 }"> {{ cursorCount + ' remaining' }} </span>
+    <span id='targetScore'> Match this side </span>
+    <div class='tryAgain' ng-show='cursorCount < 0 '>
+      Try Again?
+    </div>
+  </div>
+  <!-- Editors -->
+  <div id='editor' ui-ace = "{theme:'monokai',mode: 'javascript',onLoad : aceLoaded}">
+  var there = 'a';
+  </div>
+
+
+  <div id='editor2'
+  ui-ace = "{
+  theme:'pastel_on_dark',
+  mode: 'javascript',
+  onLoad : aceLoaded2
+  }" readonly="true">
+  var there = 'o';
+  </div>
+</div>

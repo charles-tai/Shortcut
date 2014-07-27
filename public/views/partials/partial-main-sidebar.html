@@ -1,0 +1,36 @@
+<span class='title'> Shortcuts </span>
+      <a ui-sref="main.signup">sign up</a>
+      <div ng-controller='statsController'>
+      <div class = 'prompt'>
+      Using the least amount of keystrokes try
+      <br>
+      to match the text in the left panel with the
+      <br>
+      text in right panel. Hint: Try using the
+      <br>
+      shortcuts below.
+      </div>
+      <div class = 'legend'>
+        Legend
+         <br>
+        ⇧ - Shift
+         <br>
+        ⌥ - Alt
+         <br>
+        ⌃ - Control
+         <br>
+        ⌘ - Command
+         <br>
+        ↵ - Enter
+      </div>
+
+      <!-- Shortcuts -->
+      <div class='shortcuts'>
+        <div ng-repeat= "(key, value) in shortcuts track by $index">
+          <span class = 'keybinding' ng-class = '{completed: value[1] }' ng-mouseenter="description = true" ng-mouseleave= "description = false">
+              {{ value[0] }}
+          </span>
+          <br>
+          <div ng-show='description'> {{ key }} </div>
+        </div>
+      </div>

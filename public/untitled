@@ -1,34 +1,16 @@
-var app = angular.module('app',[
-  'ui.ace',
-  'ui.router'
-]);
-app.config(function ($stateProvider, $urlRouterProvider) {
+var app = angular.module('app',['ngRoute','ui.ace']);
+app.config(['$routeProvider', function($routeProvider){
+  $routeProvider.
+   when('/level1', {
+    templateUrl: 'level1.html',
+    controller: 'linkController'
+  })
+}]);
+// normally angular watches all its variables, but when working with non angular functions (jQuery, outside code)
+  // $watch - used to watch variables that are not changed by angular (jQuery)
+  // $scope.$apply - tells scope to reinspect all its variables
 
-    $urlRouterProvider.otherwise('/main');
-    $stateProvider
-      .state('main', {
-        url: '/main',
-        views: {
-          '': {
-            templateUrl: 'views/partials/partial-main.html'
-          },
-          'sidebar@main': {
-            templateUrl: 'views/partials/partial-main-sidebar.html',
-            controller: 'statsController'
-          },
-          'content@main': {
-            templateUrl: 'views/partials/partial-main-content.html',
-            controller: 'statsController'
-          }
-        }
-      })
-      .state('main.signup', {
-        url: '/signup',
-        templateUrl: 'views/partials/partial-main-signup.html'
-      });
-});
-
-app.controller('statsController', ['$scope', '$window', '$state', function($scope, $window,$state) {
+app.controller('statsController', ['$scope', '$window', function($scope, $window) {
   $scope.cursorCount = 63;
   $scope.changeCount = 0;
   $scope.targetChange = 62;
